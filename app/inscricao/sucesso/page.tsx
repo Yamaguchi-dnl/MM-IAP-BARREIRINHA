@@ -31,7 +31,7 @@ export default function PaginaSucesso({
                 <PixPayment codigo={codigo} nome={nome} />
               ) : (
                 <div className="space-y-4 py-8 text-center">
-                  <h1 className="font-serif text-2xl text-evento-marrom">
+                  <h1 className="font-display text-2xl text-evento-marrom">
                     Não encontramos os dados da sua inscrição
                   </h1>
                   <p className="text-sm text-muted-foreground">

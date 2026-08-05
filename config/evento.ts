@@ -66,7 +66,7 @@ export const eventoConfig = {
 
   // Identidade visual
   logo: "/logo.svg",
-  imagemPrincipal: "/hero.jpg",
+  imagemPrincipal: "/hero.png",
   imagemSocial: "/og-image.jpg",
 
   // Conteúdo institucional

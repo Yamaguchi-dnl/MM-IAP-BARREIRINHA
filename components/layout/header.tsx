@@ -8,7 +8,7 @@ export function Header() {
     <header className="border-b border-border/70 bg-background">
       <div className="container flex h-20 items-center justify-between">
         <Link href="/" className="flex items-center gap-3">
-          <span className="font-serif text-lg font-semibold tracking-tight text-evento-marrom sm:text-xl">
+          <span className="font-display text-lg font-semibold tracking-tight text-evento-marrom sm:text-xl">
             {eventoConfig.nomeEvento}
           </span>
         </Link>

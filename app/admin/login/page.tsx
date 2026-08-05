@@ -24,7 +24,7 @@ export default function PaginaLoginAdmin({
             <p className="text-xs font-semibold uppercase tracking-wide text-primary">
               Área administrativa
             </p>
-            <h1 className="mt-2 font-serif text-2xl text-evento-marrom">
+            <h1 className="mt-2 font-display text-2xl text-evento-marrom">
               {eventoConfig.nomeEvento}
             </h1>
           </div>

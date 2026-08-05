@@ -14,7 +14,7 @@ export default function PaginaPrivacidade() {
       <Header />
       <main className="py-16 sm:py-20">
         <div className="container max-w-2xl space-y-6">
-          <h1 className="font-serif text-3xl text-evento-marrom">
+          <h1 className="font-display text-3xl text-evento-marrom">
             Política de privacidade
           </h1>
 
@@ -26,7 +26,7 @@ export default function PaginaPrivacidade() {
 
           <div className="space-y-4 text-sm leading-relaxed text-foreground/80">
             <div>
-              <h2 className="font-serif text-lg text-evento-marrom">
+              <h2 className="font-display text-lg text-evento-marrom">
                 Quais dados coletamos
               </h2>
               <p>
@@ -39,7 +39,7 @@ export default function PaginaPrivacidade() {
             </div>
 
             <div>
-              <h2 className="font-serif text-lg text-evento-marrom">
+              <h2 className="font-display text-lg text-evento-marrom">
                 Como usamos seus dados
               </h2>
               <p>
@@ -51,7 +51,7 @@ export default function PaginaPrivacidade() {
             </div>
 
             <div>
-              <h2 className="font-serif text-lg text-evento-marrom">
+              <h2 className="font-display text-lg text-evento-marrom">
                 Seus direitos
               </h2>
               <p>
@@ -68,7 +68,7 @@ export default function PaginaPrivacidade() {
             </div>
 
             <div>
-              <h2 className="font-serif text-lg text-evento-marrom">
+              <h2 className="font-display text-lg text-evento-marrom">
                 Pagamento via Pix
               </h2>
               <p>

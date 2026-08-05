@@ -28,7 +28,7 @@ export default function PaginaInscricao() {
                 <p className="text-xs font-semibold uppercase tracking-wide text-primary">
                   Resumo do evento
                 </p>
-                <h1 className="mt-2 font-serif text-2xl text-evento-marrom">
+                <h1 className="mt-2 font-display text-2xl text-evento-marrom">
                   {eventoConfig.nomeEvento}
                 </h1>
               </div>
@@ -65,7 +65,7 @@ export default function PaginaInscricao() {
             <CardContent className="p-8">
               {aberta ? (
                 <>
-                  <h2 className="font-serif text-2xl text-evento-marrom">
+                  <h2 className="font-display text-2xl text-evento-marrom">
                     Dados da participante
                   </h2>
                   <p className="mt-1 text-sm text-muted-foreground">
@@ -78,7 +78,7 @@ export default function PaginaInscricao() {
                 </>
               ) : (
                 <div className="py-10 text-center">
-                  <h2 className="font-serif text-2xl text-evento-marrom">
+                  <h2 className="font-display text-2xl text-evento-marrom">
                     Inscrições encerradas
                   </h2>
                   <p className="mt-2 text-sm text-muted-foreground">

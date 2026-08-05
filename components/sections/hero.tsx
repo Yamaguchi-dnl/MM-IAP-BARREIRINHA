@@ -15,7 +15,7 @@ export function Hero() {
           {eventoConfig.nomeIgreja}
         </span>
 
-        <h1 className="animate-fade-up text-balance font-serif text-4xl font-semibold leading-tight sm:text-6xl">
+        <h1 className="animate-fade-up text-balance font-display text-4xl font-semibold leading-tight sm:text-6xl">
           {eventoConfig.temaEvento}
         </h1>
 

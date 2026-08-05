@@ -59,7 +59,7 @@ export default async function PaginaAdmin({
   return (
     <div className="space-y-8">
       <div>
-        <h1 className="font-serif text-3xl text-evento-marrom">Dashboard</h1>
+        <h1 className="font-display text-3xl text-evento-marrom">Dashboard</h1>
         <p className="mt-1 text-sm text-muted-foreground">
           Visão geral das inscrições do evento.
         </p>
@@ -69,7 +69,7 @@ export default async function PaginaAdmin({
 
       <div className="flex flex-col gap-4">
         <div className="flex items-center justify-between">
-          <h2 className="font-serif text-xl text-evento-marrom">
+          <h2 className="font-display text-xl text-evento-marrom">
             Inscrições ({resultadoLista.total})
           </h2>
           <a

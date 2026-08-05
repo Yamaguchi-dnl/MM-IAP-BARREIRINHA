@@ -53,7 +53,7 @@ export function PixPayment({
         <p className="text-sm font-medium text-success">
           Inscrição recebida com sucesso!
         </p>
-        <p className="mt-1 text-2xl font-serif font-semibold text-evento-marrom">
+        <p className="mt-1 text-2xl font-display font-semibold text-evento-marrom">
           {codigo}
         </p>
         <p className="mt-1 text-xs text-muted-foreground">
@@ -66,7 +66,7 @@ export function PixPayment({
           <Card>
             <CardContent className="flex flex-col items-center gap-4 p-6 text-center">
               <p className="text-sm text-muted-foreground">Valor a pagar</p>
-              <p className="font-serif text-3xl text-evento-terracota">
+              <p className="font-display text-3xl text-evento-terracota">
                 {formatarMoeda(eventoConfig.valorInscricao)}
               </p>
 

@@ -301,7 +301,7 @@ export function InscricaoDetalhe({
             <p className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">
               Código
             </p>
-            <p className="font-serif text-2xl text-evento-marrom">
+            <p className="font-display text-2xl text-evento-marrom">
               {inscricao.codigo}
             </p>
             <p className="text-xs text-muted-foreground">

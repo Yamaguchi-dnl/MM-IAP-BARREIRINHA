@@ -28,7 +28,7 @@ export default async function PaginaDetalheInscricao({
       </Link>
 
       <div>
-        <h1 className="font-serif text-3xl text-evento-marrom">
+        <h1 className="font-display text-3xl text-evento-marrom">
           {inscricao.nome_completo}
         </h1>
         <p className="text-sm text-muted-foreground">

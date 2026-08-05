@@ -8,7 +8,7 @@ export function Footer() {
     <footer className="border-t border-border/70 bg-evento-fundo-secundario/60">
       <div className="container flex flex-col gap-8 py-12 md:flex-row md:justify-between">
         <div className="max-w-sm space-y-2">
-          <p className="font-serif text-lg font-semibold text-evento-marrom">
+          <p className="font-display text-lg font-semibold text-evento-marrom">
             {eventoConfig.nomeEvento}
           </p>
           <p className="text-sm text-muted-foreground">

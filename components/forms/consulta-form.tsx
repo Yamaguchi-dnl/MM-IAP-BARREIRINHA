@@ -121,7 +121,7 @@ export function ConsultaForm() {
         <div className="space-y-6">
           <Card>
             <CardContent className="space-y-3 p-6">
-              <p className="font-serif text-xl text-evento-marrom">
+              <p className="font-display text-xl text-evento-marrom">
                 {resultado.dados.nome_completo}
               </p>
               <div className="flex flex-wrap gap-2">

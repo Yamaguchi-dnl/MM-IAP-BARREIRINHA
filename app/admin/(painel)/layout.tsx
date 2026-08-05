@@ -26,7 +26,7 @@ export default async function AdminLayout({
     <div className="min-h-screen bg-muted/30">
       <header className="border-b border-border/70 bg-card">
         <div className="container flex h-16 items-center justify-between">
-          <Link href="/admin" className="font-serif text-lg text-evento-marrom">
+          <Link href="/admin" className="font-display text-lg text-evento-marrom">
             {eventoConfig.nomeEvento} · Painel
           </Link>
           <div className="flex items-center gap-4">
