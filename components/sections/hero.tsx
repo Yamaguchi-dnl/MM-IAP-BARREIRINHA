@@ -50,7 +50,7 @@ export function Hero() {
 
   return (
     <section className="relative overflow-hidden bg-evento-branco">
-      <div className="container flex items-center justify-between py-6 lg:grid lg:grid-cols-3">
+      <div className="flex items-center justify-between px-6 py-6 sm:px-10 lg:grid lg:grid-cols-3 lg:px-12 xl:px-20 2xl:px-32">
         <Link href="/" className="flex items-center gap-3 lg:justify-self-start">
           <span className="relative h-10 w-10 overflow-hidden rounded-full bg-evento-argila">
             <Image src={eventoConfig.logo} alt={eventoConfig.nomeIgreja} fill className="object-cover" />
@@ -90,7 +90,7 @@ export function Hero() {
           />
         </div>
 
-        <div className="container relative">
+        <div className="relative px-6 sm:px-10 lg:px-12 xl:px-20 2xl:px-32">
           <div className="relative mx-auto flex max-w-xl flex-col items-center gap-6 text-center">
             <span className="animate-fade-up rounded-full bg-evento-argila px-4 py-1.5 text-[11px] font-semibold uppercase tracking-wide text-evento-branco sm:text-xs sm:tracking-[0.15em]">
               {eventoConfig.nomeIgreja}
