@@ -52,19 +52,19 @@ export function Hero() {
     <section className="relative overflow-hidden bg-evento-branco">
       <div className="container flex items-center justify-between py-6 lg:grid lg:grid-cols-3">
         <Link href="/" className="flex items-center gap-3 lg:justify-self-start">
-          <span className="relative h-10 w-10 overflow-hidden rounded-full bg-evento-vinho">
+          <span className="relative h-10 w-10 overflow-hidden rounded-full bg-evento-argila">
             <Image src={eventoConfig.logo} alt={eventoConfig.nomeIgreja} fill className="object-cover" />
           </span>
         </Link>
 
-        <span className="font-display text-sm font-medium tracking-wide text-evento-vinho lg:justify-self-center">
+        <span className="font-display text-sm font-medium tracking-wide text-evento-argila lg:justify-self-center">
           {eventoConfig.nomeEvento}
         </span>
 
         <Button
           asChild
           size="sm"
-          className="hidden bg-evento-vinho text-evento-branco hover:bg-evento-vinho/90 lg:inline-flex lg:justify-self-end"
+          className="hidden bg-evento-argila text-evento-branco hover:bg-evento-argila/90 lg:inline-flex lg:justify-self-end"
         >
           <Link href="/inscricao">inscreva-se</Link>
         </Button>
@@ -92,11 +92,11 @@ export function Hero() {
 
         <div className="container relative">
           <div className="relative mx-auto flex max-w-xl flex-col items-center gap-6 text-center">
-            <span className="animate-fade-up rounded-full bg-evento-vinho px-4 py-1.5 text-[11px] font-semibold uppercase tracking-wide text-evento-branco sm:text-xs sm:tracking-[0.15em]">
+            <span className="animate-fade-up rounded-full bg-evento-argila px-4 py-1.5 text-[11px] font-semibold uppercase tracking-wide text-evento-branco sm:text-xs sm:tracking-[0.15em]">
               {eventoConfig.nomeIgreja}
             </span>
 
-            <h1 className="animate-fade-up text-balance font-display text-4xl font-semibold leading-[1.05] text-evento-vinho sm:text-5xl lg:text-6xl">
+            <h1 className="animate-fade-up text-balance font-display text-4xl font-semibold leading-[1.05] text-evento-argila sm:text-5xl lg:text-6xl">
               {eventoConfig.temaEvento}
             </h1>
 
@@ -104,7 +104,7 @@ export function Hero() {
               <Button
                 size="lg"
                 asChild
-                className="rounded-full bg-evento-vinho px-8 text-base font-semibold text-evento-branco hover:bg-evento-vinho/90"
+                className="rounded-full bg-evento-argila px-8 text-base font-semibold text-evento-branco hover:bg-evento-argila/90"
               >
                 <Link href="/inscricao">inscreva-se</Link>
               </Button>
@@ -136,7 +136,7 @@ export function Hero() {
         </div>
       </div>
 
-      <div className="h-2 w-full bg-evento-vinho" />
+      <div className="h-2 w-full bg-evento-argila" />
     </section>
   );
 }
