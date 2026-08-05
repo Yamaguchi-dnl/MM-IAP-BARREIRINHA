@@ -23,7 +23,7 @@ create policy "Administrador vê o próprio registro"
   on public.administradores
   for select
   to authenticated
-  using (id = auth.uid());
+  using (id = (select auth.uid()));
 
 -- ==========================================================
 -- Tabela: inscricoes
@@ -74,7 +74,7 @@ create policy "Administrador ativo vê inscrições"
   using (
     exists (
       select 1 from public.administradores a
-      where a.id = auth.uid() and a.ativo = true
+      where a.id = (select auth.uid()) and a.ativo = true
     )
   );
 
@@ -85,13 +85,13 @@ create policy "Administrador ativo atualiza inscrições"
   using (
     exists (
       select 1 from public.administradores a
-      where a.id = auth.uid() and a.ativo = true
+      where a.id = (select auth.uid()) and a.ativo = true
     )
   )
   with check (
     exists (
       select 1 from public.administradores a
-      where a.id = auth.uid() and a.ativo = true
+      where a.id = (select auth.uid()) and a.ativo = true
     )
   );
 
@@ -138,7 +138,7 @@ create policy "Administrador ativo vê auditoria"
   using (
     exists (
       select 1 from public.administradores a
-      where a.id = auth.uid() and a.ativo = true
+      where a.id = (select auth.uid()) and a.ativo = true
     )
   );
 
@@ -149,6 +149,6 @@ create policy "Administrador ativo registra auditoria"
   with check (
     exists (
       select 1 from public.administradores a
-      where a.id = auth.uid() and a.ativo = true
+      where a.id = (select auth.uid()) and a.ativo = true
     )
   );
