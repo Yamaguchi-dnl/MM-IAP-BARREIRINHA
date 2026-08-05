@@ -60,7 +60,7 @@ export const eventoConfig = {
   },
 
   // Contato
-  numeroWhatsappComprovante: "[A_DEFINIR: DDI+DDD+número, ex: 5592999999999]",
+  numeroWhatsappComprovante: "5541997112814",
   instagram: "[A_DEFINIR: Link do Instagram]",
   emailContato: "[A_DEFINIR: E-mail de contato]",
 

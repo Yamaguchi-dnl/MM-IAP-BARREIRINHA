@@ -5,7 +5,6 @@ import { CalendarDays, MapPin, Ticket } from "lucide-react";
 import { eventoConfig, inscricoesEstaoAbertas } from "@/config/evento";
 import { formatarMoeda } from "@/lib/format";
 import { Header } from "@/components/layout/header";
-import { Footer } from "@/components/layout/footer";
 import { InscricaoForm } from "@/components/forms/inscricao-form";
 import { Card, CardContent } from "@/components/ui/card";
 
@@ -20,7 +19,7 @@ export default function PaginaInscricao() {
   return (
     <>
       <Header />
-      <main className="bg-organic-blob py-16 sm:py-20">
+      <main className="min-h-screen bg-gradient-to-br from-evento-marrom via-evento-vinho to-evento-argila py-16 sm:py-20">
         <div className="container grid gap-10 lg:grid-cols-[1fr_1.4fr] lg:items-start">
           <Card className="lg:sticky lg:top-28">
             <CardContent className="space-y-5 p-8">
@@ -98,7 +97,6 @@ export default function PaginaInscricao() {
           </Card>
         </div>
       </main>
-      <Footer />
     </>
   );
 }
