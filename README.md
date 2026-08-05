@@ -85,6 +85,13 @@ Imagens opcionais podem ser adicionadas em `public/` (logo, foto principal e
 imagem de compartilhamento social) e referenciadas em `config/evento.ts`. Um
 placeholder simples de logo já está em `public/logo.svg`.
 
+**Foto da primeira tela (hero):** salve o arquivo em `public/hero.jpg`
+(o caminho já está configurado em `imagemPrincipal`, em `config/evento.ts`).
+Recomendado: foto na vertical ou quadrada, boa iluminação, pelo menos
+1600×2000px — ela ocupa a tela inteira com um degradê escuro por cima para
+o texto ficar legível. Enquanto o arquivo não existir, aparece um fundo
+gradiente na paleta do evento no lugar da foto.
+
 ### 6. Rodar em desenvolvimento
 
 ```bash

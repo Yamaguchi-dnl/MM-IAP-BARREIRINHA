@@ -3,58 +3,44 @@ import { CalendarDays, MapPin } from "lucide-react";
 
 import { eventoConfig } from "@/config/evento";
 import { Button } from "@/components/ui/button";
-import { Countdown } from "@/components/sections/countdown";
+import { HeroBackground } from "@/components/sections/hero-background";
 
 export function Hero() {
   return (
-    <section className="relative overflow-hidden bg-organic-blob">
-      <div className="pointer-events-none absolute -right-24 -top-24 h-72 w-72 rounded-full bg-evento-vinho/10 blur-3xl" />
-      <div className="pointer-events-none absolute -left-24 bottom-0 h-72 w-72 rounded-full bg-evento-terracota/10 blur-3xl" />
+    <section className="relative flex min-h-screen items-center overflow-hidden">
+      <HeroBackground />
 
-      <div className="container relative flex flex-col items-center gap-8 py-20 text-center sm:py-28">
-        <span className="animate-fade-up rounded-full border border-evento-terracota/30 bg-card/70 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.2em] text-evento-terracota">
+      <div className="container relative flex flex-col items-center gap-6 py-28 text-center text-evento-branco">
+        <span className="animate-fade-up rounded-full border border-evento-branco/30 bg-evento-branco/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.2em] backdrop-blur-sm">
           {eventoConfig.nomeIgreja}
         </span>
 
-        <h1 className="animate-fade-up text-balance font-serif text-4xl font-semibold leading-tight text-evento-marrom sm:text-6xl">
-          {eventoConfig.nomeEvento}
+        <h1 className="animate-fade-up text-balance font-serif text-4xl font-semibold leading-tight sm:text-6xl">
+          {eventoConfig.temaEvento}
         </h1>
 
         <p
-          className="animate-fade-up max-w-xl text-balance text-lg leading-relaxed text-foreground/80"
+          className="animate-fade-up flex flex-wrap items-center justify-center gap-x-4 gap-y-1 text-balance text-sm text-evento-branco/85 sm:text-base"
           style={{ animationDelay: "0.1s" }}
         >
-          {eventoConfig.temaEvento}
-        </p>
-
-        <div
-          className="animate-fade-up flex flex-wrap items-center justify-center gap-4 text-sm text-foreground/70"
-          style={{ animationDelay: "0.15s" }}
-        >
           <span className="flex items-center gap-2">
-            <CalendarDays className="h-4 w-4 text-primary" />
+            <CalendarDays className="h-4 w-4" />
             {eventoConfig.dataEventoExibicao} · {eventoConfig.horario}
           </span>
           <span className="flex items-center gap-2">
-            <MapPin className="h-4 w-4 text-primary" />
+            <MapPin className="h-4 w-4" />
             {eventoConfig.local}
           </span>
-        </div>
+        </p>
 
-        <div
-          className="animate-fade-up flex flex-col items-center gap-4 sm:flex-row"
-          style={{ animationDelay: "0.2s" }}
-        >
-          <Button size="lg" asChild>
+        <div className="animate-fade-up pt-2" style={{ animationDelay: "0.15s" }}>
+          <Button
+            size="lg"
+            asChild
+            className="bg-evento-branco text-evento-marrom hover:bg-evento-branco/90"
+          >
             <Link href="/inscricao">Quero me inscrever</Link>
           </Button>
-          <Button size="lg" variant="outline" asChild>
-            <a href="#sobre">Saiba mais</a>
-          </Button>
-        </div>
-
-        <div className="animate-fade-up" style={{ animationDelay: "0.25s" }}>
-          <Countdown dataEventoISO={eventoConfig.dataEventoISO} />
         </div>
       </div>
     </section>

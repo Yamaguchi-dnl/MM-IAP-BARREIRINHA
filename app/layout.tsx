@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
-import { Cormorant_Garamond, Inter } from "next/font/google";
+import { Fraunces, Inter } from "next/font/google";
 
 import { eventoConfig } from "@/config/evento";
 import { Toaster } from "@/components/ui/sonner";
 
 import "./globals.css";
 
-const fonteDisplay = Cormorant_Garamond({
+const fonteDisplay = Fraunces({
   subsets: ["latin"],
   weight: ["500", "600", "700"],
   variable: "--font-display",
