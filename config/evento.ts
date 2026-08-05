@@ -65,7 +65,7 @@ export const eventoConfig = {
   emailContato: "[A_DEFINIR: E-mail de contato]",
 
   // Identidade visual
-  logo: "/logo.svg",
+  logo: "/logo.jpg",
   imagemPrincipal: "/hero.png",
   imagemSocial: "/og-image.jpg",
 

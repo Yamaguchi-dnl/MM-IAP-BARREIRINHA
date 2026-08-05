@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 import { eventoConfig } from "@/config/evento";
@@ -8,6 +9,13 @@ export function Header() {
     <header>
       <div className="container flex h-20 items-center justify-between">
         <Link href="/" className="flex items-center gap-3">
+          <Image
+            src={eventoConfig.logo}
+            alt=""
+            width={40}
+            height={40}
+            className="h-10 w-10 rounded-full object-cover"
+          />
           <span className="font-display text-lg font-semibold tracking-tight text-evento-marrom sm:text-xl">
             {eventoConfig.nomeEvento}
           </span>
