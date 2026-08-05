@@ -70,54 +70,68 @@ export function Hero() {
         </Button>
       </div>
 
-      <div className="container relative py-10 lg:py-20">
+      <div className="relative py-10 lg:py-20">
         <div className="pointer-events-none absolute inset-0 hidden lg:block">
-          <Foto foto={oracao} className="absolute left-0 top-2 aspect-[3/4] w-48 -rotate-3 xl:w-56" />
-          <Foto foto={abraco} className="absolute -left-2 bottom-4 aspect-[4/5] w-44 rotate-2 xl:w-52" />
-          <Foto foto={prega} className="absolute right-0 top-0 aspect-[4/5] w-48 rotate-2 xl:w-56" />
-          <Foto foto={louvor} className="absolute -right-2 bottom-10 aspect-[3/4] w-44 -rotate-3 xl:w-52" />
+          <Foto
+            foto={oracao}
+            className="absolute left-[3%] top-2 aspect-[3/4] w-48 -rotate-3 xl:w-56 xl:left-[6%] 2xl:w-64 2xl:left-[10%]"
+          />
+          <Foto
+            foto={abraco}
+            className="absolute left-[1%] bottom-4 aspect-[4/5] w-44 rotate-2 xl:w-52 xl:left-[3%] 2xl:w-60 2xl:left-[7%]"
+          />
+          <Foto
+            foto={prega}
+            className="absolute right-[3%] top-0 aspect-[4/5] w-48 rotate-2 xl:w-56 xl:right-[6%] 2xl:w-64 2xl:right-[10%]"
+          />
+          <Foto
+            foto={louvor}
+            className="absolute right-[1%] bottom-10 aspect-[3/4] w-44 -rotate-3 xl:w-52 xl:right-[3%] 2xl:w-60 2xl:right-[7%]"
+          />
         </div>
 
-        <div className="relative mx-auto flex max-w-xl flex-col items-center gap-6 text-center">
-          <span className="animate-fade-up rounded-full bg-evento-vinho px-4 py-1.5 text-[11px] font-semibold uppercase tracking-wide text-evento-branco sm:text-xs sm:tracking-[0.15em]">
-            {eventoConfig.nomeIgreja}
-          </span>
+        <div className="container relative">
+          <div className="relative mx-auto flex max-w-xl flex-col items-center gap-6 text-center">
+            <span className="animate-fade-up rounded-full bg-evento-vinho px-4 py-1.5 text-[11px] font-semibold uppercase tracking-wide text-evento-branco sm:text-xs sm:tracking-[0.15em]">
+              {eventoConfig.nomeIgreja}
+            </span>
 
-          <h1 className="animate-fade-up text-balance font-display text-4xl font-semibold leading-[1.05] text-evento-vinho sm:text-5xl lg:text-6xl">
-            {eventoConfig.temaEvento}
-          </h1>
+            <h1 className="animate-fade-up text-balance font-display text-4xl font-semibold leading-[1.05] text-evento-vinho sm:text-5xl lg:text-6xl">
+              {eventoConfig.temaEvento}
+            </h1>
 
-          <div className="animate-fade-up pt-2" style={{ animationDelay: "0.1s" }}>
-            <Button
-              size="lg"
-              asChild
-              className="rounded-full bg-evento-vinho px-8 text-base font-semibold text-evento-branco hover:bg-evento-vinho/90"
+            <div className="animate-fade-up pt-2" style={{ animationDelay: "0.1s" }}>
+              <Button
+                size="lg"
+                asChild
+                className="rounded-full bg-evento-vinho px-8 text-base font-semibold text-evento-branco hover:bg-evento-vinho/90"
+              >
+                <Link href="/inscricao">inscreva-se</Link>
+              </Button>
+            </div>
+
+            <div
+              className="animate-fade-up flex flex-col items-center gap-1 pt-2"
+              style={{ animationDelay: "0.15s" }}
             >
-              <Link href="/inscricao">inscreva-se</Link>
-            </Button>
+              <p className="flex flex-wrap items-center justify-center gap-x-3 gap-y-1 text-balance text-sm font-medium text-evento-marrom sm:text-base">
+                <span>{eventoConfig.dataEventoExibicao}</span>
+                <span className="text-evento-terracota">•</span>
+                <span>{eventoConfig.horario}</span>
+              </p>
+              <p className="text-balance text-sm text-evento-marrom/60">{eventoConfig.endereco}</p>
+            </div>
           </div>
 
-          <div
-            className="animate-fade-up flex flex-col items-center gap-1 pt-2"
-            style={{ animationDelay: "0.15s" }}
-          >
-            <p className="flex flex-wrap items-center justify-center gap-x-3 gap-y-1 text-balance text-sm font-medium text-evento-marrom sm:text-base">
-              <span>{eventoConfig.dataEventoExibicao}</span>
-              <span className="text-evento-terracota">•</span>
-              <span>{eventoConfig.horario}</span>
-            </p>
-            <p className="text-balance text-sm text-evento-marrom/60">{eventoConfig.endereco}</p>
-          </div>
-        </div>
-
-        <div className="mx-auto mt-12 grid max-w-xs grid-cols-2 gap-4 sm:max-w-sm lg:hidden">
-          <div className="flex flex-col gap-4">
-            <Foto foto={oracao} className="aspect-[3/4]" />
-            <Foto foto={abraco} className="aspect-[4/5]" />
-          </div>
-          <div className="flex flex-col gap-4 pt-8">
-            <Foto foto={prega} className="aspect-[4/5]" />
-            <Foto foto={louvor} className="aspect-[3/4]" />
+          <div className="mx-auto mt-12 grid max-w-xs grid-cols-2 gap-4 sm:max-w-sm lg:hidden">
+            <div className="flex flex-col gap-4">
+              <Foto foto={oracao} className="aspect-[3/4]" />
+              <Foto foto={abraco} className="aspect-[4/5]" />
+            </div>
+            <div className="flex flex-col gap-4 pt-8">
+              <Foto foto={prega} className="aspect-[4/5]" />
+              <Foto foto={louvor} className="aspect-[3/4]" />
+            </div>
           </div>
         </div>
       </div>
