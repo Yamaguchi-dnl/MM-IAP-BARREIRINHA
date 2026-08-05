@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
-import { Afacad, Inter } from "next/font/google";
+import { Bricolage_Grotesque, Inter } from "next/font/google";
 
 import { eventoConfig } from "@/config/evento";
 import { Toaster } from "@/components/ui/sonner";
 
 import "./globals.css";
 
-const fonteDisplay = Afacad({
+const fonteDisplay = Bricolage_Grotesque({
   subsets: ["latin"],
   weight: ["500", "600", "700"],
   variable: "--font-display",
