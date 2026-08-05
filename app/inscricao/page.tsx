@@ -19,7 +19,7 @@ export default function PaginaInscricao() {
   return (
     <>
       <Header />
-      <main className="min-h-screen bg-gradient-to-br from-evento-marrom via-evento-vinho to-evento-argila py-16 sm:py-20">
+      <main className="min-h-screen bg-organic-blob py-16 sm:py-20">
         <div className="container grid gap-10 lg:grid-cols-[1fr_1.4fr] lg:items-start">
           <Card className="lg:sticky lg:top-28">
             <CardContent className="space-y-5 p-8">
