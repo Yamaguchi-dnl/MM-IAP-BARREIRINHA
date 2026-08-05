@@ -42,8 +42,8 @@ export const eventoConfig = {
   dataEventoISO: "2026-09-27",
   dataEventoExibicao: "27 de setembro de 2026 (domingo)",
   horario: "10h, com almoço especial às 12h",
-  local: "Em frente ao Parque da Barreirinha",
-  endereco: "Av. Anita Garibaldi, 9745",
+  local: "IAP Barreirinha (em frente ao Parque da Barreirinha)",
+  endereco: "Rua Flávio Dallegrave, 9745 - Barreirinha, Curitiba - PR, 82510-010",
   linkMapa: "[A_DEFINIR: Link do Google Maps, opcional]",
 
   // Inscrição
