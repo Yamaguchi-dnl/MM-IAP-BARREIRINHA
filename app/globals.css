@@ -1,0 +1,84 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #f7f1ea;
+  --foreground: #2b201d;
+
+  --card: #fffdf9;
+  --card-foreground: #2b201d;
+
+  --popover: #fffdf9;
+  --popover-foreground: #2b201d;
+
+  --primary: #882c2b;
+  --primary-foreground: #fffdf9;
+
+  --secondary: #8b6d57;
+  --secondary-foreground: #fffdf9;
+
+  --muted: #ede3d8;
+  --muted-foreground: #6b5645;
+
+  --accent: #5e1f2c;
+  --accent-foreground: #fffdf9;
+
+  --destructive: #a13d2d;
+  --destructive-foreground: #fffdf9;
+
+  --success: #5c6e4a;
+  --success-foreground: #fffdf9;
+
+  --border: #e3d6c7;
+  --input: #e3d6c7;
+  --ring: #882c2b;
+
+  --radius: 0.9rem;
+}
+
+* {
+  border-color: var(--border);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+}
+
+:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 2px;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .bg-organic-blob {
+    background: radial-gradient(
+      ellipse at top left,
+      rgba(136, 44, 43, 0.1),
+      transparent 60%
+    );
+  }
+}
