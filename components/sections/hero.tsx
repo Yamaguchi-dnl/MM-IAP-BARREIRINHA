@@ -110,7 +110,7 @@ export function Hero() {
           </div>
         </div>
 
-        <div className="mt-12 grid grid-cols-2 gap-4 lg:hidden">
+        <div className="mx-auto mt-12 grid max-w-xs grid-cols-2 gap-4 sm:max-w-sm lg:hidden">
           <div className="flex flex-col gap-4">
             <Foto foto={oracao} className="aspect-[3/4]" />
             <Foto foto={abraco} className="aspect-[4/5]" />
