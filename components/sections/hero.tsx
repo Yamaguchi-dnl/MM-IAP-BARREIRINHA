@@ -70,27 +70,20 @@ export function Hero() {
         </Button>
       </div>
 
-      <div className="relative py-10 lg:py-20">
+      <div className="relative py-10 lg:flex lg:min-h-[80vh] lg:items-center lg:py-16 xl:min-h-[85vh]">
         <div className="pointer-events-none absolute inset-0 hidden lg:block">
-          <Foto
-            foto={oracao}
-            className="absolute left-[3%] top-2 aspect-[3/4] w-48 -rotate-3 xl:w-56 xl:left-[6%] 2xl:w-64 2xl:left-[10%]"
-          />
-          <Foto
-            foto={abraco}
-            className="absolute left-[1%] bottom-4 aspect-[4/5] w-44 rotate-2 xl:w-52 xl:left-[3%] 2xl:w-60 2xl:left-[7%]"
-          />
-          <Foto
-            foto={prega}
-            className="absolute right-[3%] top-0 aspect-[4/5] w-48 rotate-2 xl:w-56 xl:right-[6%] 2xl:w-64 2xl:right-[10%]"
-          />
-          <Foto
-            foto={louvor}
-            className="absolute right-[1%] bottom-10 aspect-[3/4] w-44 -rotate-3 xl:w-52 xl:right-[3%] 2xl:w-60 2xl:right-[7%]"
-          />
+          <div className="absolute left-[3%] top-1/2 w-48 -translate-y-1/2 xl:left-[6%] xl:w-56 2xl:left-[10%] 2xl:w-64">
+            <Foto foto={oracao} className="relative aspect-[3/4] w-full -rotate-3" />
+            <Foto foto={abraco} className="absolute left-[-8%] top-[62%] aspect-[4/5] w-[92%] rotate-2" />
+          </div>
+
+          <div className="absolute right-[3%] top-1/2 w-48 -translate-y-1/2 xl:right-[6%] xl:w-56 2xl:right-[10%] 2xl:w-64">
+            <Foto foto={prega} className="relative aspect-[4/5] w-full rotate-2" />
+            <Foto foto={louvor} className="absolute right-[-8%] top-[58%] aspect-[3/4] w-[92%] -rotate-3" />
+          </div>
         </div>
 
-        <div className="relative px-6 sm:px-10 lg:px-12 xl:px-20 2xl:px-32">
+        <div className="relative px-6 sm:px-10 lg:w-full lg:px-12 xl:px-20 2xl:px-32">
           <div className="relative mx-auto flex max-w-xl flex-col items-center gap-6 text-center">
             <span className="animate-fade-up rounded-full bg-evento-argila px-4 py-1.5 text-[11px] font-semibold uppercase tracking-wide text-evento-branco sm:text-xs sm:tracking-[0.15em]">
               {eventoConfig.nomeIgreja}
