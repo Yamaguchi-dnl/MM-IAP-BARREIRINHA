@@ -14,10 +14,10 @@ type FotoColagem = {
 };
 
 const fotosColagem: FotoColagem[] = [
-  { src: "/galeria/oracao.jpg", alt: "Mulheres em oração durante o encontro" },
-  { src: "/galeria/prega.jpg", alt: "Ministração da palavra no encontro" },
-  { src: "/galeria/louvor.jpg", alt: "Momento de louvor no encontro" },
-  { src: "/galeria/abraco.jpg", alt: "Abraço entre participantes do encontro" },
+  { src: "/oracao.jpg", alt: "Mulheres em oração durante o encontro" },
+  { src: "/prega.jpg", alt: "Ministração da palavra no encontro" },
+  { src: "/louvor.jpg", alt: "Momento de louvor no encontro" },
+  { src: "/abraco.jpg", alt: "Abraço entre participantes do encontro" },
 ];
 
 function fotoExiste(src: string) {
@@ -72,12 +72,12 @@ export function Hero() {
 
       <div className="relative py-10 lg:flex lg:min-h-[80vh] lg:items-center lg:py-16 xl:min-h-[85vh]">
         <div className="pointer-events-none absolute inset-0 hidden lg:block">
-          <div className="absolute left-[3%] top-1/2 w-48 -translate-y-1/2 xl:left-[6%] xl:w-56 2xl:left-[10%] 2xl:w-64">
+          <div className="absolute left-[3%] top-1/2 w-48 -translate-y-[74%] xl:left-[6%] xl:w-56 2xl:left-[10%] 2xl:w-64">
             <Foto foto={oracao} className="relative aspect-[3/4] w-full -rotate-3" />
             <Foto foto={abraco} className="absolute left-[-8%] top-[62%] aspect-[4/5] w-[92%] rotate-2" />
           </div>
 
-          <div className="absolute right-[3%] top-1/2 w-48 -translate-y-1/2 xl:right-[6%] xl:w-56 2xl:right-[10%] 2xl:w-64">
+          <div className="absolute right-[3%] top-1/2 w-48 -translate-y-[78%] xl:right-[6%] xl:w-56 2xl:right-[10%] 2xl:w-64">
             <Foto foto={prega} className="relative aspect-[4/5] w-full rotate-2" />
             <Foto foto={louvor} className="absolute right-[-8%] top-[58%] aspect-[3/4] w-[92%] -rotate-3" />
           </div>
