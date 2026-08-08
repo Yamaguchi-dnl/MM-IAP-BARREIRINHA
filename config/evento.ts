@@ -31,7 +31,7 @@ export type PerguntaFrequente = {
 export const eventoConfig = {
   // Identificação do evento
   nomeEvento: "Encontro de Mulheres",
-  temaEvento: "Como ser Maria no mundo que exige Marta",
+  temaEvento: "Como ser Maria em um mundo que exige Marta",
   descricaoCurta:
     "Um tempo de comunhão e renovo para mulheres, à luz de Lucas 10:38-42 — com almoço especial incluso.",
   descricaoCompleta:
@@ -85,7 +85,7 @@ export const eventoConfig = {
     },
     {
       horario: "10h30",
-      titulo: "Palavra: Como ser Maria no mundo que exige Marta",
+      titulo: "Palavra: Como ser Maria em um mundo que exige Marta",
       descricao: "Ministração baseada em Lucas 10:38-42.",
     },
     {
