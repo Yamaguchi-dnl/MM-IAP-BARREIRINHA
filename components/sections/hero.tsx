@@ -52,8 +52,8 @@ export function Hero() {
     <section className="relative overflow-hidden bg-evento-branco">
       <div className="flex items-center justify-between px-6 py-6 sm:px-10 lg:grid lg:grid-cols-3 lg:px-12 xl:px-20 2xl:px-32">
         <Link href="/" className="flex items-center gap-3 lg:justify-self-start">
-          <span className="relative h-10 w-10 overflow-hidden rounded-full bg-evento-argila">
-            <Image src={eventoConfig.logo} alt={eventoConfig.nomeIgreja} fill className="object-cover" />
+          <span className="relative h-10 w-10">
+            <Image src={eventoConfig.logo} alt={eventoConfig.nomeIgreja} fill className="object-contain" />
           </span>
         </Link>
 
