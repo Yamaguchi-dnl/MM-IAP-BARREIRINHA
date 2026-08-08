@@ -129,7 +129,7 @@ export function Hero() {
         </div>
       </div>
 
-      <div className="h-2 w-full bg-evento-argila" />
+      <div className="h-16 w-full bg-evento-argila sm:h-20 lg:h-28" />
     </section>
   );
 }
