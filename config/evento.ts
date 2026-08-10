@@ -47,8 +47,8 @@ export const eventoConfig = {
   linkMapa: "[A_DEFINIR: Link do Google Maps, opcional]",
 
   // Inscrição
-  valorInscricao: 35,
-  valorInscricaoExibicao: "R$ 35,00 (dinheiro ou Pix)",
+  valorInscricao: 40,
+  valorInscricaoExibicao: "R$ 40,00 (dinheiro ou Pix)",
   limiteVagas: null as number | null, // null = sem limite de vagas
   prazoInscricaoISO: "2026-09-20",
 

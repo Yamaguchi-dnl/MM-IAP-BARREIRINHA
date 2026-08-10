@@ -83,7 +83,6 @@ export async function criarInscricao(
     const { error: erroInsercao } = await supabase.from("inscricoes").insert({
       codigo,
       nome_completo: valores.nomeCompleto,
-      data_nascimento: valores.dataNascimento,
       telefone: valores.telefone,
       email: vazioParaNull(valores.email),
       igreja: vazioParaNull(valores.igreja),

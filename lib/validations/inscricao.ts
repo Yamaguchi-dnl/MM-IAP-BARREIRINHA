@@ -12,23 +12,12 @@ export const telefoneSchema = z
     message: "Informe um telefone válido com DDD",
   });
 
-export const dataNascimentoSchema = z
-  .string()
-  .min(1, "Informe a data de nascimento")
-  .refine((valor) => !Number.isNaN(new Date(valor).getTime()), {
-    message: "Data de nascimento inválida",
-  })
-  .refine((valor) => new Date(valor).getTime() < Date.now(), {
-    message: "Data de nascimento não pode ser no futuro",
-  });
-
 export const inscricaoFormSchema = z.object({
   nomeCompleto: z
     .string()
     .trim()
     .min(3, "Informe o nome completo")
     .max(200, "Nome muito longo"),
-  dataNascimento: dataNascimentoSchema,
   telefone: telefoneSchema,
   email: z
     .union([z.literal(""), z.string().trim().email("E-mail inválido")])

@@ -34,7 +34,6 @@ export function InscricaoForm() {
     resolver: zodResolver(inscricaoFormSchema),
     defaultValues: {
       nomeCompleto: "",
-      dataNascimento: "",
       telefone: "",
       email: "",
       igreja: "",
@@ -87,20 +86,6 @@ export function InscricaoForm() {
                 <FormLabel>Nome completo *</FormLabel>
                 <FormControl>
                   <Input placeholder="Seu nome completo" {...field} />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
-
-          <FormField
-            control={form.control}
-            name="dataNascimento"
-            render={({ field }) => (
-              <FormItem>
-                <FormLabel>Data de nascimento *</FormLabel>
-                <FormControl>
-                  <Input type="date" {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>

@@ -10,7 +10,7 @@ export type Inscricao = {
   id: string;
   codigo: string;
   nome_completo: string;
-  data_nascimento: string;
+  data_nascimento: string | null;
   telefone: string;
   email: string | null;
   igreja: string | null;
@@ -30,11 +30,7 @@ export type Inscricao = {
 
 export type InscricaoInsert = Pick<
   Inscricao,
-  | "nome_completo"
-  | "data_nascimento"
-  | "telefone"
-  | "cidade"
-  | "consentimento_privacidade"
+  "nome_completo" | "telefone" | "cidade" | "consentimento_privacidade"
 > &
   Partial<
     Pick<
