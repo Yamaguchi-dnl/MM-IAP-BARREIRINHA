@@ -15,7 +15,11 @@ type Estatisticas = {
 export function DashboardStats({ stats }: { stats: Estatisticas }) {
   const vagasRestantes =
     eventoConfig.limiteVagas !== null
-      ? Math.max(eventoConfig.limiteVagas - stats.total, 0)
+      ? Math.max(
+          eventoConfig.limiteVagas -
+            (stats.total - stats.inscricoesCanceladas),
+          0,
+        )
       : null;
 
   const itens = [
