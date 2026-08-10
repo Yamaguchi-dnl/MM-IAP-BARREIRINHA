@@ -15,7 +15,6 @@ export type AtualizacaoInscricao = Partial<
   Pick<
     Inscricao,
     | "nome_completo"
-    | "data_nascimento"
     | "telefone"
     | "email"
     | "igreja"

@@ -10,7 +10,6 @@ export type Inscricao = {
   id: string;
   codigo: string;
   nome_completo: string;
-  data_nascimento: string | null;
   telefone: string;
   email: string | null;
   igreja: string | null;

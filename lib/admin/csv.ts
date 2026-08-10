@@ -6,7 +6,6 @@ import { formatarDataHora } from "@/lib/format";
 const COLUNAS: { chave: keyof Inscricao; rotulo: string }[] = [
   { chave: "codigo", rotulo: "Código" },
   { chave: "nome_completo", rotulo: "Nome completo" },
-  { chave: "data_nascimento", rotulo: "Data de nascimento" },
   { chave: "telefone", rotulo: "Telefone" },
   { chave: "email", rotulo: "E-mail" },
   { chave: "igreja", rotulo: "Igreja" },

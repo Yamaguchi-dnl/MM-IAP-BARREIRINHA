@@ -31,7 +31,7 @@ export default function PaginaPrivacidade() {
               </h2>
               <p>
                 Coletamos apenas os dados necessários para organizar o
-                evento: nome completo, data de nascimento, telefone, e-mail
+                evento: nome completo, telefone, e-mail
                 (opcional), igreja/congregação (opcional), cidade,
                 informações sobre restrição alimentar e acessibilidade
                 (quando informadas) e observações.

@@ -1,5 +1,6 @@
 -- Remove a data de nascimento do formulário de inscrição pública.
--- A coluna deixa de ser obrigatória; registros antigos mantêm o valor.
+-- A coluna é removida da tabela; dados de nascimento de inscrições
+-- existentes são perdidos permanentemente.
 
 alter table public.inscricoes
-  alter column data_nascimento drop not null;
+  drop column data_nascimento;
