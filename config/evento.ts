@@ -81,16 +81,19 @@ export const eventoConfig = {
   programacao: [
     {
       horario: "10h00",
-      titulo: "Recepção e abertura",
-    },
-    {
-      horario: "10h30",
-      titulo: "Palavra: Como ser Maria em um mundo que exige Marta",
-      descricao: "Ministração baseada em Lucas 10:38-42.",
+      titulo: "Culto",
     },
     {
       horario: "12h00",
-      titulo: "Almoço especial",
+      titulo: "Almoço",
+    },
+    {
+      horario: "14h00",
+      titulo: "Oficina de pintura em vaso",
+    },
+    {
+      horario: "16h00",
+      titulo: "Encerramento",
     },
   ] as ItemProgramacao[],
 

@@ -49,6 +49,22 @@ export default function PaginaInscricao() {
                 </p>
               </div>
 
+              <div className="space-y-2 border-t border-border/70 pt-5">
+                <p className="text-xs font-semibold uppercase tracking-wide text-primary">
+                  Cronograma
+                </p>
+                <ul className="space-y-1.5 text-sm text-foreground/80">
+                  {eventoConfig.programacao.map((item) => (
+                    <li key={item.horario} className="flex gap-2">
+                      <span className="font-medium text-evento-marrom">
+                        {item.horario}
+                      </span>
+                      <span>{item.titulo}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
               <p className="text-xs leading-relaxed text-muted-foreground">
                 Ao se inscrever, seus dados serão usados apenas para a
                 organização deste evento. Consulte nossa{" "}
