@@ -98,14 +98,17 @@ export default function PaginaInscricao() {
                   </h2>
                   <p className="mt-2 text-sm text-muted-foreground">
                     O prazo para inscrições neste evento já foi encerrado.
-                    Entre em contato pelo e-mail{" "}
+                    Para mais informações, entre em contato com a Daiana pelo
+                    WhatsApp{" "}
                     <a
-                      href={`mailto:${eventoConfig.emailContato}`}
+                      href={`https://wa.me/${eventoConfig.numeroWhatsappComprovante}`}
+                      target="_blank"
+                      rel="noreferrer"
                       className="underline"
                     >
-                      {eventoConfig.emailContato}
-                    </a>{" "}
-                    para mais informações.
+                      (41) 99711-2814
+                    </a>
+                    .
                   </p>
                 </div>
               )}
