@@ -1,4 +1,4 @@
-import { Download } from "lucide-react";
+import { Download, FileText } from "lucide-react";
 
 import { listarInscricoes, getEstatisticasDashboard } from "@/lib/admin/queries";
 import type { StatusInscricao, StatusPagamento } from "@/lib/supabase/database.types";
@@ -72,13 +72,22 @@ export default async function PaginaAdmin({
           <h2 className="font-display text-xl text-evento-marrom">
             Inscrições ({resultadoLista.total})
           </h2>
-          <a
-            href={`/admin/exportar?${parametrosExportacao.toString()}`}
-            className="inline-flex h-10 items-center gap-2 rounded-full border border-input px-4 text-sm font-medium hover:bg-muted/60"
-          >
-            <Download className="h-4 w-4" />
-            Exportar CSV
-          </a>
+          <div className="flex flex-wrap items-center gap-3">
+            <a
+              href="/admin/exportar/restricoes"
+              className="inline-flex h-10 items-center gap-2 rounded-full border border-input px-4 text-sm font-medium hover:bg-muted/60"
+            >
+              <FileText className="h-4 w-4" />
+              PDF de restrições
+            </a>
+            <a
+              href={`/admin/exportar?${parametrosExportacao.toString()}`}
+              className="inline-flex h-10 items-center gap-2 rounded-full border border-input px-4 text-sm font-medium hover:bg-muted/60"
+            >
+              <Download className="h-4 w-4" />
+              Exportar CSV
+            </a>
+          </div>
         </div>
 
         <FiltrosForm valores={searchParams} />
