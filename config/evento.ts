@@ -50,7 +50,7 @@ export const eventoConfig = {
   valorInscricao: 50,
   valorInscricaoExibicao: "R$ 50,00 (dinheiro ou Pix)",
   limiteVagas: 100 as number | null, // null = sem limite de vagas
-  prazoInscricaoISO: "2026-08-19",
+  prazoInscricaoISO: "2026-09-20",
 
   // Pix (dados reais)
   pix: {
