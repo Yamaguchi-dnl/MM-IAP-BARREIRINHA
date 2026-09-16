@@ -71,12 +71,19 @@ const styles = StyleSheet.create({
     textTransform: "uppercase",
     letterSpacing: 0.6,
   },
-  secaoTitulo: {
-    fontSize: 13,
+  secaoEyebrow: {
+    fontSize: 9,
     fontFamily: "Helvetica-Bold",
     color: COR_PRIMARIA,
-    marginBottom: 8,
-    marginTop: 18,
+    textTransform: "uppercase",
+    letterSpacing: 1.2,
+  },
+  secaoTitulo: {
+    fontSize: 16,
+    fontFamily: "Helvetica-Bold",
+    color: COR_PRIMARIA,
+    marginTop: 4,
+    marginBottom: 16,
   },
   tabela: {
     borderWidth: 1,
@@ -164,6 +171,34 @@ function paraLinhas(
     .sort((a, b) => a.nome.localeCompare(b.nome, "pt-BR"));
 }
 
+function Rodape({ geradoEm }: { geradoEm: string }) {
+  return (
+    <View style={styles.rodape} fixed>
+      <Text>Gerado em {geradoEm}</Text>
+      <Text
+        render={({ pageNumber, totalPages }) =>
+          `Página ${pageNumber} de ${totalPages}`
+        }
+      />
+    </View>
+  );
+}
+
+function CabecalhoTabela() {
+  return (
+    <View style={styles.linhaCabecalho} fixed>
+      <Text style={[styles.celulaCabecalho, styles.colNome]}>Nome</Text>
+      <Text style={[styles.celulaCabecalho, styles.colCidade]}>Cidade</Text>
+      <Text style={[styles.celulaCabecalho, styles.colTelefone]}>
+        Telefone
+      </Text>
+      <Text style={[styles.celulaCabecalho, styles.colDetalhe]}>
+        Detalhes
+      </Text>
+    </View>
+  );
+}
+
 function Tabela({ linhas }: { linhas: LinhaRestricao[] }) {
   if (linhas.length === 0) {
     return <Text style={styles.vazio}>Nenhum registro informado.</Text>;
@@ -171,16 +206,7 @@ function Tabela({ linhas }: { linhas: LinhaRestricao[] }) {
 
   return (
     <View style={styles.tabela}>
-      <View style={styles.linhaCabecalho}>
-        <Text style={[styles.celulaCabecalho, styles.colNome]}>Nome</Text>
-        <Text style={[styles.celulaCabecalho, styles.colCidade]}>Cidade</Text>
-        <Text style={[styles.celulaCabecalho, styles.colTelefone]}>
-          Telefone
-        </Text>
-        <Text style={[styles.celulaCabecalho, styles.colDetalhe]}>
-          Detalhes
-        </Text>
-      </View>
+      <CabecalhoTabela />
       {linhas.map((linha, indice) => (
         <View
           key={`${linha.nome}-${indice}`}
@@ -196,6 +222,28 @@ function Tabela({ linhas }: { linhas: LinhaRestricao[] }) {
         </View>
       ))}
     </View>
+  );
+}
+
+function PaginaSecao({
+  eyebrow,
+  titulo,
+  geradoEm,
+  children,
+}: {
+  eyebrow: string;
+  titulo: string;
+  geradoEm: string;
+  children: React.ReactNode;
+}) {
+  return (
+    <Page size="A4" style={styles.page} wrap>
+      <View style={styles.faixaTopo} fixed />
+      <Text style={styles.secaoEyebrow}>{eyebrow}</Text>
+      <Text style={styles.secaoTitulo}>{titulo}</Text>
+      {children}
+      <Rodape geradoEm={geradoEm} />
+    </Page>
   );
 }
 
@@ -237,21 +285,24 @@ export function RestricoesDocument({
           </View>
         </View>
 
-        <Text style={styles.secaoTitulo}>Restrições alimentares</Text>
-        <Tabela linhas={alimentares} />
-
-        <Text style={styles.secaoTitulo}>Necessidades de acessibilidade</Text>
-        <Tabela linhas={acessibilidade} />
-
-        <View style={styles.rodape} fixed>
-          <Text>Gerado em {geradoEm}</Text>
-          <Text
-            render={({ pageNumber, totalPages }) =>
-              `Página ${pageNumber} de ${totalPages}`
-            }
-          />
-        </View>
+        <Rodape geradoEm={geradoEm} />
       </Page>
+
+      <PaginaSecao
+        eyebrow="Restrições alimentares"
+        titulo="Restrições alimentares"
+        geradoEm={geradoEm}
+      >
+        <Tabela linhas={alimentares} />
+      </PaginaSecao>
+
+      <PaginaSecao
+        eyebrow="Necessidades de acessibilidade"
+        titulo="Necessidades de acessibilidade"
+        geradoEm={geradoEm}
+      >
+        <Tabela linhas={acessibilidade} />
+      </PaginaSecao>
     </Document>
   );
 }
