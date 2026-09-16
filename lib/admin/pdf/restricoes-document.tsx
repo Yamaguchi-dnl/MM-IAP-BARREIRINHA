@@ -153,6 +153,39 @@ type LinhaRestricao = {
   detalhe: string;
 };
 
+const RESPOSTAS_NEGATIVAS = new Set([
+  "nao",
+  "n/a",
+  "na",
+  "nenhuma",
+  "nenhum",
+  "-",
+  "nenhuma restricao",
+  "nenhuma restricao alimentar",
+  "nenhuma necessidade",
+  "sem restricao",
+  "sem restricoes",
+  "sem necessidade",
+  "sem necessidades",
+  "nao tenho",
+  "nao possuo",
+  "nada",
+]);
+
+function normalizarResposta(valor: string) {
+  return valor
+    .normalize("NFD")
+    .replace(/[̀-ͯ]/g, "")
+    .trim()
+    .toLowerCase()
+    .replace(/[.!]+$/g, "")
+    .trim();
+}
+
+function ehRespostaNegativa(valor: string) {
+  return RESPOSTAS_NEGATIVAS.has(normalizarResposta(valor));
+}
+
 function paraLinhas(
   inscricoes: Inscricao[],
   campo: "restricao_alimentar" | "necessidade_acessibilidade",
@@ -160,7 +193,11 @@ function paraLinhas(
   return inscricoes
     .filter((inscricao) => {
       const valor = inscricao[campo];
-      return typeof valor === "string" && valor.trim() !== "";
+      return (
+        typeof valor === "string" &&
+        valor.trim() !== "" &&
+        !ehRespostaNegativa(valor)
+      );
     })
     .map((inscricao) => ({
       nome: inscricao.nome_completo,
